@@ -67,6 +67,83 @@ def showChart():
 
 arrow = None
 
+def update_plot(i, bolas, numpoints, numcons, maiordMax, scat, fig, ax):
+    #scat.set_array(data[i])
+       # [ 300 * abs(x)**1.5 + 100 for x in bola1[i]] 
+
+    global texts
+    global arrow
+
+    #csv_in = open('bola1.csv', 'rb')
+    #myreader = csv.reader(csv_in)
+    #global bola1 
+    #bola1 = []
+    #for row in myreader:
+    #    x, y = row
+    #    bola1.append([float(x),float(y)])
+
+    #print bola1;
+    #0 39 78
+    #1 40 79
+    
+    values = tuple( (x*39)+i    for x in xrange(0, 6))
+
+    #scat.set_offsets([bola1[i][:2], bola2[i][:2]])
+    #print values
+    xy = tuple([x[2], x[3]] for x in bolas)
+    ids = tuple(x[0] for x in bolas)
+    
+    #print i
+    #print xy[i::39]
+
+    scat.set_offsets(xy[i::39])
+    #scat._sizes = [300 * abs(bola1[i][1])**1.5 + 100,   300 * abs(bola2[i][1])**1.5 + 100]
+    #scat._sizes = (tuple(300 * abs(1)**1.5 + 100 for x in bolas))
+    sizes = tuple([ (2000 * abs(x[2]/(x[3]) if x[3] else 0 )) ] for x in bolas)
+    scat._sizes = sizes
+
+
+    sizes2 = tuple([ str((2000 * abs(x[2]/(x[3]) if x[3] else 0 ))) + " " + x[1] ] for x in bolas)
+    #for line in sizes2: print line 
+    #print texts
+    #for yu in texts:
+    #    plt.gcf().texts.remove(yu)
+    
+    ax.set_title(bolas[i][1] + "  Quadro: " + str(i))
+    #fig.suptitle(bolas[i][1], fontsize=14, fontweight='bold')
+    #for x in values:
+    #    texts.append(plt.annotate(ids[x], xy=xy[x]))
+        #arrow2 = matplotlib.text.Annotation(ids[x], xy=xy[x]) 
+        #ax.add_artist(arrow2)
+        #texts.append(ax) 
+        #arrow2.remove() 
+    
+    #print ax.patches
+    
+
+
+    return scat,
+
+
+def main():
+  
+    top = Tk()
+    global E1
+    
+    L1 = Label(top, text="intervalos")
+    L1.pack( side = LEFT)
+
+    E1 = Entry(top, bd =5)
+    E1.pack(side = LEFT)
+
+ 
+    B = Button(top, text ="mostrar", command = showChart)
+    B.pack()
+
+    top.mainloop()
+    
+
+
 
 
 main()
