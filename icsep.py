@@ -34,10 +34,7 @@ def showChart():
         if float(dmax) > maiordMax:
             maiordMax = float(dmax)
         bolas.append([str(insc), str(data), float(dmed), float(dmax)])
- 
-    #for row in myreader:
-    #    x, y = row
-    #    bola1.append([float(x),float(y)])
+
  
     numcons =  len(set(tuple(x[0] for x in bolas)))
     numpoints = numcons
