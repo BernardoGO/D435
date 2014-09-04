@@ -70,6 +70,15 @@ def showChart():
                     #print "menor " + str(bolas[cons*dia])
                     colors[cons-1] = 5;
 
+        
+    #for cons in xrange((numcons/2), (numcons)+1):
+    #    colors[cons-1] = 5;
+
+   
+
+
+    #print bolasU;
+
     print numpoints
     dmed, dmax, c, s = np.random.random((4, numpoints))
     #y, e, c, s = np.random.random((4, numpoints))
