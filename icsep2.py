@@ -128,8 +128,7 @@ def update_plot(i, bolas, color_data, numpoints, numcons, maiordMax, scat, fig, 
     
     values = tuple( (x*39)+i    for x in xrange(0, 6))
 
-    #scat.set_offsets([bola1[i][:2], bola2[i][:2]])
-    #print values
+
     xy = tuple([x[2], x[3]] for x in bolas)
     ids = tuple(x[0] for x in bolas)
     
