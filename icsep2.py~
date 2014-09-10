@@ -157,10 +157,22 @@ def update_plot(i, bolas, color_data, numpoints, numcons, maiordMax, scat, fig, 
     #scat.set_array(color_data[i])
     #print color_data[i]
     sizes2 = tuple([ str((2000 * abs(x[2]/(x[3]) if x[3] else 0 ))) + " " + x[1] ] for x in bolas[i::39])
-
+    #for line in sizes2: print line 
+    #print texts
+    #for yu in texts:
+    #    plt.gcf().texts.remove(yu)
     
     ax.set_title(bolas[i][1] + "  Quadro: " + str(i))
-
+    #fig.suptitle(bolas[i][1], fontsize=14, fontweight='bold')
+    #for x in values:
+    #    texts.append(plt.annotate(ids[x], xy=xy[x]))
+        #arrow2 = matplotlib.text.Annotation(ids[x], xy=xy[x]) 
+        #ax.add_artist(arrow2)
+        #texts.append(ax) 
+        #arrow2.remove() 
+    
+    #print ax.patches
+    
 
 
     return scat,
