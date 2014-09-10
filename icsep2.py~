@@ -150,8 +150,7 @@ def update_plot(i, bolas, color_data, numpoints, numcons, maiordMax, scat, fig, 
     #print xy[i::39]
 
     scat.set_offsets(xy[i::39])
-    #scat._sizes = [300 * abs(bola1[i][1])**1.5 + 100,   300 * abs(bola2[i][1])**1.5 + 100]
-    #scat._sizes = (tuple(300 * abs(1)**1.5 + 100 for x in bolas))
+
     sizes = tuple([ (2000 * abs(x[2]/(x[3]) if x[3] else 0 )) ] for x in bolas)
     scat._sizes = sizes
     #scat.set_array(color_data[i])

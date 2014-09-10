@@ -125,17 +125,6 @@ def update_plot(i, bolas, color_data, numpoints, numcons, maiordMax, scat, fig, 
     global texts
     global arrow
 
-    #csv_in = open('bola1.csv', 'rb')
-    #myreader = csv.reader(csv_in)
-    #global bola1 
-    #bola1 = []
-    #for row in myreader:
-    #    x, y = row
-    #    bola1.append([float(x),float(y)])
-
-    #print bola1;
-    #0 39 78
-    #1 40 79
     
     values = tuple( (x*39)+i    for x in xrange(0, 6))
 
