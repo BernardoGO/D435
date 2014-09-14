@@ -65,6 +65,10 @@ for dia in xrange(0, 39):
 
 x = [dt.datetime.strptime(d,'%Y-%m-%d').date() for d in dates]
 
+#plt.plot_date(x, maiorlvls, fmt="bo", tz=None, xdate=True)
+#splt.plot_date(x, menorlvls, fmt="bo", tz=None, xdate=True)
+
+#plt.show()
 
 
 marker_style = dict(linestyle=':', color='cornflowerblue', markersize=10)
