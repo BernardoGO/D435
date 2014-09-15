@@ -17,17 +17,13 @@ dates = []
 for row in myreader:
         
         insc, data, dmed, dmax, hdmax,ramo,  = row
-        #if dmax > maiordMax:
-        #    maiordMax = float(dmax)
+
         bolas.append([str(insc), str(data), float(dmed), float(dmax)])
 
 numcons =  len(set(tuple(x[0] for x in bolas)))
 
 
 print numcons
-
-
-
 
 
 
